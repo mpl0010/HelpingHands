@@ -11,6 +11,15 @@
 npm-debug.log
 yarn-error.log
 
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # IDEs and editors
 .idea/
 .project
@@ -30,7 +39,7 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-.angular/*
+/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage
