@@ -1,7 +1,7 @@
 # AGENTS.md
 
 ## Project Overview
-- **Project:** [DonationSite] — [A website that displays various children's hospitals that users can donate money to children in need.]
+- **Project:** [HelpingHands] — [A website that displays various children's hospitals that users can donate money to children in need.]
 - **Target user:** [Anyone]
 - **My skill level:** [expert]
 - **Stack:**
@@ -19,10 +19,18 @@
 - **Upgrade Dependency:** [`yarn upgrade [package]`, `yarn upgrade [package]@[version]`, `yarn upgrade [package]@[tag]`]
 - **Remove Dependency** [`yarn remove [package]`]
 - **Dev:** [Run `npm run start` for a dev server. The application will automatically reload if you change any of the source files.]
+    - The underlying command that will be run is `ng serve`.
 - **Build:** [Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.]
+    - The underlying command that will be run is `ng build`.
 - **Clean:** [Run `npm run clean` to clean artifacts.]
-- **Test:** [Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io)]
-- **Lint:** [Run `npm run verify` to execute ESLint, run Tests, and run build]
+    - The underlying command that will be run is `ng cache clean && yarn cache clean && rm -rf node_modules yarn.lock dist`.
+    - If the Clean command is ever run, `yarn install` will need to be run afterwards to populate dependencies.
+- **Test:** [Run `npm run test` To execute unit tests with the [Vitest](https://vitest.dev/) test runner.]
+    - The underlying command that will be run is `ng test`.
+- **Lint** [Run `npm run lint` to run lint.]
+    - The underlying command that will be run is `ng lint`.
+- **Verify:** [Run `npm run verify` to execute ESLint, run Tests, and run build]
+    - The underlying command that will be run is `npm run lint && npm run test && npm run build`.
 
 ## Coding Rules
 - **Standalone:** All components, directives, and pipes must be standalone. Avoid NgModules unless absolutely neccessary.
