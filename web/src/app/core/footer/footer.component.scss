@@ -1,0 +1,11 @@
+.layout-footer-container {
+    position: relative;
+    width: 100%;
+    min-height: var(--footer-toolbar-height);
+    background-color: var(--p-tertiary-500);
+    border-top: 1px solid transparent;
+}
+
+div {
+    color: var(--p-neutral-950);
+}
