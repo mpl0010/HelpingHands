@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CardModule } from 'primeng/card';
 
 @Component({
     selector: 'app-landing-page',
     imports: [CardModule],
     templateUrl: './landing-page.component.html',
-    styleUrl: './landing-page.component.scss'
+    styleUrl: './landing-page.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LandingPageComponent {
     cardDt = {
