@@ -10,6 +10,12 @@ export const routes: Routes = [
       pathMatch: 'full'
     },
     {
+      path: 'about',
+      loadComponent: () =>
+        import('./pages/about-us/about-us-page.component').then((m) => m.AboutUsPageComponent),
+      title: 'About Us',
+    },
+    {
       path: '**',
       component: NotFoundPageComponent,
       title: 'Not Found'

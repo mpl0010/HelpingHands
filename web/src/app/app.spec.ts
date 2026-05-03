@@ -14,6 +14,13 @@ describe('App', () => {
             providers: [
                 provideRouter([
                     { path: '', component: LandingPageComponent },
+                    {
+                        path: 'about',
+                        loadComponent: () =>
+                            import('./pages/about-us/about-us-page.component').then(
+                                (m) => m.AboutUsPageComponent
+                            ),
+                    },
                     { path: '**', component: NotFoundPageComponent },
                 ]),
             ]
@@ -45,6 +52,11 @@ describe('App', () => {
     it('should display landing page component for default route', async () => {
         await harness.navigateByUrl('');
         expect(harness.routeNativeElement?.tagName.toLowerCase()).toBe('app-landing-page');
+    });
+
+    it('should display about us page component for about route', async () => {
+        await harness.navigateByUrl('/about');
+        expect(harness.routeNativeElement?.tagName.toLowerCase()).toBe('app-about-us-page');
     });
 
     it('should display not found page component for not found route', async () => {
